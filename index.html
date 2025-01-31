@@ -8,19 +8,37 @@
     <style>
         *{
            margin: 0;
+           box-sizing: border-box;
 
         }
         header{
-            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            background-color: yellow;
             border-radius: 10px;
+            flex-direction: column;
+            text-align: center;
         }
         footer{
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: yellow;
             border-radius: 10px;
+            padding-right: 20px;
         }
         img{
             padding: 20px;
             width: 500px;
+        }
+        h1{
+            text-align: center;
+        }
+        ul, li{
+            display: inline;
+            flex-direction: column;
+            text-align: center;
+            padding-right: 15px;
+        }
+        a:hover{
+            color:green
+            
         }
     </style>
 </head>
@@ -28,15 +46,22 @@
 <body style="background-color: red; color: black">
     <header>
         <h1>Pizzaria do Carlão</h1>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        
     </header>
-
 </body>
 <main>
     <img src="pizza.jpg" height="410px" width="100%">
-
+    
 </main>
 <footer>
-    Desenvolvido por Emanuel Santos de Carvalho Silva
+    <h2>Pizzaria do Carlão</h2>
+    <h3>Desenvolvido por Emanuel Santos de Carvalho Silva</h3>
 </footer>
 
 </html>
