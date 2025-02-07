@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montar Pizzas - Pizzaria do Carlão</title>
+    <title>Cardápio - Pizzaria do Carlão</title>
     <style>
         * {
             margin: 0;
@@ -46,7 +46,7 @@
             border: 2px solid green;
         }
 
-        .pizza-options {
+        .menu-item {
             margin: 20px;
             padding: 20px;
             border: 2px solid black;
@@ -59,44 +59,29 @@
 <body style="background-color: red; color: black">
     <header>
         <img src="pzcarlao.png" alt="" height="100px">
-        <h1>Montar Pizzas - Pizzaria do Carlão</h1>
+        <h1>Cardápio - Pizzaria do Carlão</h1>
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="promocoes.html">Promoções</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="montarpizzas.html">Montar Pizzas</a></li>
             <li><a href="sobre.html">Sobre</a></li>
         </ul>
     </header>
     <main>
-        <div class="pizza-options">
-            <h2>Monte sua Pizza</h2>
-            <form>
-                <label for="tamanho">Tamanho:</label>
-                <select id="tamanho" name="tamanho">
-                    <option value="pequena">Pequena</option>
-                    <option value="media">Média</option>
-                    <option value="grande">Grande</option>
-                </select><br><br>
-
-                <label for="massa">Tipo de Massa:</label>
-                <select id="massa" name="massa">
-                    <option value="fina">Fina</option>
-                    <option value="normal">Normal</option>
-                    <option value="grossa">Grossa</option>
-                </select><br><br>
-
-                <label>Ingredientes:</label><br>
-                <input type="checkbox" id="queijo" name="queijo" value="queijo">
-                <label for="queijo">Queijo</label><br>
-                <input type="checkbox" id="calabresa" name="calabresa" value="calabresa">
-                <label for="calabresa">Calabresa</label><br>
-                <input type="checkbox" id="frango" name="frango" value="frango">
-                <label for="frango">Frango</label><br>
-                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                <label for="bacon">Bacon</label><br><br>
-
-                <input type="submit" value="Montar Pizza">
-            </form>
+        <div class="menu-item">
+            <h2>Pizza de Calabresa</h2>
+            <p>Molho de tomate, mussarela, calabresa e cebola.</p>
+            <p>R$ 35,00</p>
+        </div>
+        <div class="menu-item">
+            <h2>Pizza de Frango com Catupiry</h2>
+            <p>Molho de tomate, mussarela, frango desfiado e catupiry.</p>
+            <p>R$ 40,00</p>
+        </div>
+        <div class="menu-item">
+            <h2>Pizza Portuguesa</h2>
+            <p>Molho de tomate, mussarela, presunto, ovo, cebola e azeitonas.</p>
+            <p>R$ 38,00</p>
         </div>
     </main>
     <footer>
