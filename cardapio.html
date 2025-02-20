@@ -11,39 +11,63 @@
             box-sizing: border-box;
         }
 
+        body {
+            background-color: red;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
         header {
             display: flex;
+            flex-wrap: wrap; 
             background-color: yellow;
             border-radius: 10px;
             text-align: center;
             align-items: center;
+            padding: 10px;
         }
 
         footer {
             background-color: yellow;
             border-radius: 10px;
-            padding-right: 20px;
-            align-items: center;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        img {
-            padding: 20px;
+        
+        header img.logo {
+            height: 100px;
+            width: auto;
+            padding: 10px;
         }
 
         h1 {
             text-align: center;
+            flex: 1; 
+            font-size: 24px;
+            margin: 10px 0;
         }
 
-        ul,
-        li {
-            display: inline;
-            flex-direction: column;
-            text-align: center;
-            padding-right: 15px;
+        ul {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
         }
 
         li {
             border: 2px solid green;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
         }
 
         .menu-item {
@@ -52,13 +76,79 @@
             border: 2px solid black;
             border-radius: 10px;
             background-color: white;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%; 
+            max-width: 300px; 
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .menu-item .text {
+            flex: 1;
+        }
+
+        .menu-item .text h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item .text p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item .text .price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @media (min-width: 600px) {
+            .menu-item {
+                flex-direction: row; 
+                text-align: left;
+            }
+
+            .menu-item img {
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px; 
+            }
+
+            .menu-item {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .menu-item .text h2 {
+                font-size: 20px;
+            }
+
+            .menu-item .text p {
+                font-size: 16px;
+            }
+
+            .menu-item .text .price {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 
-<body style="background-color: red; color: black">
+<body>
     <header>
-        <img src="pzcarlao.png" alt="" height="100px">
+        <img src="pzcarlao.png" alt="Logo da Pizzaria do Carlão" class="logo">
         <h1>Cardápio - Pizzaria do Carlão</h1>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -69,52 +159,28 @@
     </header>
     <main>
         <div class="menu-item">
+            <div class="text">
+                <h2>Pizza de Calabresa</h2>
+                <p>Molho de tomate, mussarela, calabresa e cebola.</p>
+                <p class="price">R$ 35,00</p>
+            </div>
             <img src="pizza.jpg" alt="Pizza de Calabresa">
-            <h2>Pizza de Calabresa</h2>
-            <p>Molho de tomate, mussarela, calabresa e cebola.</p>
-            <p>R$ 35,00</p>
         </div>
         <div class="menu-item">
+            <div class="text">
+                <h2>Pizza de Frango com Catupiry</h2>
+                <p>Molho de tomate, mussarela, frango desfiado e catupiry.</p>
+                <p class="price">R$ 40,00</p>
+            </div>
             <img src="fc.jpg" alt="Pizza de Frango e Catupiry">
-            <h2>Pizza de Frango com Catupiry</h2>
-            <p>Molho de tomate, mussarela, frango desfiado e catupiry.</p>
-            <p>R$ 40,00</p>
         </div>
         <div class="menu-item">
+            <div class="text">
+                <h2>Pizza Portuguesa</h2>
+                <p>Molho de tomate, mussarela, presunto, ovo, cebola e azeitonas.</p>
+                <p class="price">R$ 38,00</p>
+            </div>
             <img src="portuguesa.jpg" alt="Pizza Portuguesa">
-            <h2>Pizza Portuguesa</h2>
-            <p>Molho de tomate, mussarela, presunto, ovo, cebola e azeitonas.</p>
-            <p>R$ 38,00</p>
-        </div>
-        <div class="menu-item" >
-            <h2>Pizza Mussarela</h2>
-            <p>Molho de tomate, mussarela, presunto, ovo, cebola e azeitonas.</p>
-            <p>R$ 38,00</p>
-        </div>
-        <div class="menu-item">
-            <h2>Pizza Quatro Queijos</h2>
-            <p>Molho de tomate, mussarela, queijo, presunto, ovo, cebola e azeitonas.</p>
-            <p>R$ 38,00</p>
-        </div>
-        <div class="menu-item">
-            <h2>Pizza Margherita</h2>
-            <p>Molho de tomate, mussarela, presunto, ovo, cebola, azeitonas e manjericão.</p>
-            <p>R$ 38,00</p>
-        </div>
-        <div class="menu-item">
-            <h2>Pizza de Chocolate</h2>
-            <p>Molho de tomate, mussarela,e chocolate.</p>
-            <p>R$ 38,00</p>
-            <div class="menu-item">
-                <h2>Pizza de Atum</h2>
-                <p>Molho de tomate, mussarela, presunto, ovo, cebola, azeitonas e atum.</p>
-                <p>R$ 38,00</p>
-            </div>
-            <div class="menu-item">
-                <h2>Pizza de Beijinho</h2>
-                <p>Molho de tomate, mussarela e beijinho.</p>
-                <p>R$ 38,00</p>
-            </div>
         </div>
     </main>
     <footer>

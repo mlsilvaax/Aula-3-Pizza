@@ -11,39 +11,62 @@
             box-sizing: border-box;
         }
 
+        body {
+            background-color: red;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
         header {
             display: flex;
+            flex-wrap: wrap; 
             background-color: yellow;
             border-radius: 10px;
             text-align: center;
             align-items: center;
+            padding: 10px;
         }
 
         footer {
             background-color: yellow;
             border-radius: 10px;
-            padding-right: 20px;
-            align-items: center;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        img {
-            padding: 20px;
+        header img.logo {
+            height: 100px;
+            width: auto;
+            padding: 10px;
         }
 
         h1 {
             text-align: center;
+            flex: 1; 
+            font-size: 24px;
+            margin: 10px 0;
         }
 
-        ul,
-        li {
-            display: inline;
-            flex-direction: column;
-            text-align: center;
-            padding-right: 15px;
+        ul {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
         }
 
         li {
             border: 2px solid green;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
         }
 
         .pizza-options {
@@ -53,12 +76,101 @@
             border-radius: 10px;
             background-color: white;
         }
+
+        .pizza-options h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .pizza-options form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+
+        .pizza-options label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .pizza-options select,
+        .pizza-options input[type="checkbox"],
+        .pizza-options input[type="submit"] {
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .pizza-options input[type="submit"] {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .pizza-options input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px; 
+            }
+
+            .pizza-options {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .pizza-options h2 {
+                font-size: 20px;
+            }
+
+            .pizza-options label {
+                font-size: 16px;
+            }
+
+            .pizza-options select,
+            .pizza-options input[type="checkbox"],
+            .pizza-options input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px; 
+            }
+
+            .pizza-options {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .pizza-options h2 {
+                font-size: 18px;
+            }
+
+            .pizza-options label {
+                font-size: 14px;
+            }
+
+            .pizza-options select,
+            .pizza-options input[type="checkbox"],
+            .pizza-options input[type="submit"] {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 
-<body style="background-color: red; color: black">
+<body>
     <header>
-        <img src="pzcarlao.png" alt="" height="100px">
+        <img src="pzcarlao.png" alt="Logo da Pizzaria do Carlão" class="logo">
         <h1>Montar Pizzas - Pizzaria do Carlão</h1>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -76,24 +188,32 @@
                     <option value="pequena">Pequena</option>
                     <option value="media">Média</option>
                     <option value="grande">Grande</option>
-                </select><br><br>
+                </select>
 
                 <label for="massa">Tipo de Massa:</label>
                 <select id="massa" name="massa">
                     <option value="fina">Fina</option>
                     <option value="normal">Normal</option>
                     <option value="grossa">Grossa</option>
-                </select><br><br>
+                </select>
 
-                <label>Ingredientes:</label><br>
-                <input type="checkbox" id="queijo" name="queijo" value="queijo">
-                <label for="queijo">Queijo</label><br>
-                <input type="checkbox" id="calabresa" name="calabresa" value="calabresa">
-                <label for="calabresa">Calabresa</label><br>
-                <input type="checkbox" id="frango" name="frango" value="frango">
-                <label for="frango">Frango</label><br>
-                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                <label for="bacon">Bacon</label><br><br>
+                <label>Ingredientes:</label>
+                <div>
+                    <input type="checkbox" id="queijo" name="queijo" value="queijo">
+                    <label for="queijo">Queijo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="calabresa" name="calabresa" value="calabresa">
+                    <label for="calabresa">Calabresa</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="frango" name="frango" value="frango">
+                    <label for="frango">Frango</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="bacon" name="bacon" value="bacon">
+                    <label for="bacon">Bacon</label>
+                </div>
 
                 <input type="submit" value="Montar Pizza">
             </form>

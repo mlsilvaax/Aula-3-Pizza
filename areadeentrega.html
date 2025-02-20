@@ -11,39 +11,62 @@
             box-sizing: border-box;
         }
 
+        body {
+            background-color: red;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
         header {
             display: flex;
+            flex-wrap: wrap; 
             background-color: yellow;
             border-radius: 10px;
             text-align: center;
             align-items: center;
+            padding: 10px;
         }
 
         footer {
             background-color: yellow;
             border-radius: 10px;
-            padding-right: 20px;
-            align-items: center;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        img {
-            padding: 20px;
+        header img.logo {
+            height: 100px;
+            width: auto;
+            padding: 10px;
         }
 
         h1 {
             text-align: center;
+            flex: 1; 
+            font-size: 24px;
+            margin: 10px 0;
         }
 
-        ul,
-        li {
-            display: inline;
-            flex-direction: column;
-            text-align: center;
-            padding-right: 15px;
+        ul {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
         }
 
         li {
             border: 2px solid green;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
         }
 
         .content {
@@ -53,12 +76,80 @@
             border-radius: 10px;
             background-color: white;
         }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            display: block;
+            padding-left: 20px;
+        }
+
+        .content ul li {
+            border: none; 
+            margin: 5px 0;
+            padding: 0;
+        }
+
+       
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .content ul li {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px; 
+            }
+
+            .content {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .content h2 {
+                font-size: 18px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .content ul li {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 
-<body style="background-color: red; color: black">
+<body>
     <header>
-        <img src="pzcarlao.png" alt="" height="100px">
+        <img src="pzcarlao.png" alt="Logo da Pizzaria do Carlão" class="logo">
         <h1>Área de Entrega - Pizzaria do Carlão</h1>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -91,7 +182,6 @@
                 <li>Morro da Coca Cola</li>
                 <li>Estação</li>
             </ul>
-
             <h2>Taxa de Entrega</h2>
             <p>A taxa de entrega varia de acordo com a distância. Consulte-nos!</p>
         </div>

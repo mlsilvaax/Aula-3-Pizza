@@ -6,68 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria do Carlão</title>
     <style>
-      
-        *{
-           margin: 0;
-           box-sizing: border-box;
-           
-
+        * {
+            margin: 0;
+            box-sizing: border-box;
         }
-        header{
+
+        body {
+            background-color: red;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
             display: flex;
+            flex-wrap: wrap; 
             background-color: yellow;
             border-radius: 10px;
             text-align: center;
             align-items: center;
-        }
-        footer{
-            background-color: yellow;
-            border-radius: 10px;
-            padding-right: 20px;
-            align-items: center;
-        }
-        img{
-            padding: 20px;
-        }
-        h1{
-            text-align: center;
-        }
-        ul, li{
-            display: inline;
-            flex-direction: column;
-            text-align: center;
-            padding-right: 15px;
-        }
-        li  {
-            border: 2px solid green;
+            padding: 10px;
         }
 
-            
+        footer {
+            background-color: yellow;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        header img.logo {
+            height: 100px;
+            width: auto;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            flex: 1; 
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            border: 2px solid green;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        main img {
+            width: 100%;
+            max-width: 800px; 
+            height: auto;
+            display: block;
+            margin: 20px auto; 
+            border-radius: 10px;
+        }
+
+        footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        footer li {
+            border: 2px solid green;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        footer li a {
+            text-decoration: none;
+            color: black;
+        }
+
         
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px; 
+            }
+
+            header img.logo {
+                height: 80px; 
+            }
+
+            main img {
+                margin: 10px auto; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px; 
+            }
+
+            header img.logo {
+                height: 60px; 
+            }
+
+            li {
+                font-size: 14px; 
+            }
+        }
     </style>
 </head>
 
-<body style="background-color: red; color: black">
+<body>
     <header>
-    <img src="pzcarlao.png" alt=""; height="100px"; >
+        <img src="pzcarlao.png" alt="Logo da Pizzaria do Carlão" class="logo">
         <h1>Pizzaria do Carlão</h1>
         <ul>
             <li><a href="promocoes.html">Promoções</a></li>
-            <li><a href="montarpizzas.html">Montar Pizzas</a></li> 
+            <li><a href="montarpizzas.html">Montar Pizzas</a></li>
             <li><a href="cardapio.html">Cardápio</a></li>
             <li><a href="sobre.html">Sobre</a></li>
         </ul>
     </header>
-</body>
-<main>
-    <img src="pizza.jpg" >
-    
-</main>
-<footer>
-    <h2>Pizzaria do Carlão</h2>
-    <h3>Desenvolvido por Emanuel Santos de Carvalho Silva</h3>
-    <li><a href="atendimento.html">Atendimento</a></li>
-            <li><a href="endereco.html">Endereço</a></li> 
+    <main>
+        <img src="pizza.jpg" alt="Pizza da Pizzaria do Carlão">
+    </main>
+    <footer>
+        <h2>Pizzaria do Carlão</h2>
+        <h3>Desenvolvido por Emanuel Santos de Carvalho Silva</h3>
+        <ul>
+            <li><a href="atendimento.html">Atendimento</a></li>
+            <li><a href="endereco.html">Endereço</a></li>
             <li><a href="areadeentrega.html">Área de Entrega</a></li>
-</footer>
+        </ul>
+    </footer>
+</body>
+
 </html>
